@@ -1,4 +1,5 @@
 import classes from "../App.module.css"
+import React from "react";
 const EnterField=()=>{
 return(
     <div className={classes.Panel}>
