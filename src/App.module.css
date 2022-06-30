@@ -1,0 +1,17 @@
+.Content{
+    display: flex;
+    border: 1px solid black;
+    padding: 900px;
+    position: fixed;
+
+}
+.Panel{
+    border:1px solid black;
+    height: 300px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
