@@ -1,8 +1,13 @@
+.main{
 
+}
 .style{
+    padding: 20px;
+    border: 1px solid black;
 
 }
-.style table{
-padding: 20px;
+.main2{
     border: 1px solid black;
+    width: 20px;
 }
+
