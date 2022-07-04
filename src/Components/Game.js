@@ -1,16 +1,18 @@
 import classes from './Game.module.css'
+import Order from "./Figure";
 const Game=()=>{
-   return(
+
+    return(
        <div className={classes.main}>
            <div>
                <table>
                    <tr>
-                       <td className={classes.main2}>1</td>
-                       <td className={classes.main2}>2</td>
-                       <td className={classes.main2}>3</td>
-                       <td className={classes.main2}>4</td>
-                       <td className={classes.main2}>5</td>
-                       <td className={classes.main2}>6</td>
+                       <td><Order Nubmer='1' Size='1' TeamNumber='1'/></td>
+                       <td><Order Nubmer='2' Size='2' TeamNumber='1'/></td>
+                       <td><Order Nubmer='3' Size='3' TeamNumber='1'/></td>
+                       <td><Order Nubmer='4' Size='4' TeamNumber='1'/></td>
+                       <td><Order Nubmer='5' Size='5' TeamNumber='1'/></td>
+                       <td><Order Nubmer='6' Size='6' TeamNumber='1'/></td>
                    </tr>
                </table>
            </div>
@@ -34,12 +36,12 @@ const Game=()=>{
            <div>
                <table>
                    <tr>
-                       <td className={classes.main2}>1</td>
-                       <td className={classes.main2}>2</td>
-                       <td className={classes.main2}>3</td>
-                       <td className={classes.main2}>4</td>
-                       <td className={classes.main2}>5</td>
-                       <td className={classes.main2}>6</td>
+                       <td><Order Nubmer='1' Size='1' TeamNumber='2'/></td>
+                       <td><Order Nubmer='2' Size='2' TeamNumber='2'/></td>
+                       <td><Order Nubmer='3' Size='3' TeamNumber='2'/></td>
+                       <td><Order Nubmer='4' Size='4' TeamNumber='2'/></td>
+                       <td><Order Nubmer='5' Size='5' TeamNumber='2'/></td>
+                       <td><Order Nubmer='6' Size='6' TeamNumber='2'/></td>
                    </tr>
                </table>
            </div>
