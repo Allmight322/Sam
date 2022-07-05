@@ -5,8 +5,9 @@ const Order = (props) => {
     const Number = props.Nubmer
     const TeamNumber = props.TeamNumber
     const Image = props.Image
+    const Size = props.Size
     return (
-        <div className={classes['team'+TeamNumber]}>
+        <div className={classes.svg + " " + classes['team'+TeamNumber+Size]}>
             {Image}
         </div>
     );
