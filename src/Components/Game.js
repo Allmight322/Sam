@@ -1,18 +1,19 @@
 import classes from './Game.module.css'
 import Order from "./Figure";
+import React from 'react';
 const Game=()=>{
-
+    const image = <img src="https://svgx.ru/svg/48446.svg"/>
     return(
        <div className={classes.main}>
            <div>
                <table>
                    <tr>
-                       <td><Order Nubmer='1' Size='1' TeamNumber='1'/></td>
-                       <td><Order Nubmer='2' Size='2' TeamNumber='1'/></td>
-                       <td><Order Nubmer='3' Size='3' TeamNumber='1'/></td>
-                       <td><Order Nubmer='4' Size='4' TeamNumber='1'/></td>
-                       <td><Order Nubmer='5' Size='5' TeamNumber='1'/></td>
-                       <td><Order Nubmer='6' Size='6' TeamNumber='1'/></td>
+                       <td><Order Nubmer='1' Size='1' TeamNumber='1' Image={image}/> </td>
+                       <td><Order Nubmer='2' Size='1' TeamNumber='1' Image={image}/></td>
+                       <td><Order Nubmer='3' Size='2' TeamNumber='1' Image={image}/></td>
+                       <td><Order Nubmer='4' Size='2' TeamNumber='1' Image={image}/></td>
+                       <td><Order Nubmer='5' Size='3' TeamNumber='1' Image={image}/></td>
+                       <td><Order Nubmer='6' Size='3' TeamNumber='1' Image={image}/></td>
                    </tr>
                </table>
            </div>
@@ -36,12 +37,12 @@ const Game=()=>{
            <div>
                <table>
                    <tr>
-                       <td><Order Nubmer='1' Size='1' TeamNumber='2'/></td>
-                       <td><Order Nubmer='2' Size='2' TeamNumber='2'/></td>
-                       <td><Order Nubmer='3' Size='3' TeamNumber='2'/></td>
-                       <td><Order Nubmer='4' Size='4' TeamNumber='2'/></td>
-                       <td><Order Nubmer='5' Size='5' TeamNumber='2'/></td>
-                       <td><Order Nubmer='6' Size='6' TeamNumber='2'/></td>
+                       <td><Order Nubmer='7' Size='1' TeamNumber='2' Image={image}/></td>
+                       <td><Order Nubmer='8' Size='1' TeamNumber='2' Image={image}/></td>
+                       <td><Order Nubmer='9' Size='2' TeamNumber='2' Image={image}/></td>
+                       <td><Order Nubmer='10' Size='2' TeamNumber='2' Image={image}/></td>
+                       <td><Order Nubmer='11' Size='3' TeamNumber='2' Image={image}/></td>
+                       <td><Order Nubmer='12' Size='3' TeamNumber='2' Image={image}/></td>
                    </tr>
                </table>
            </div>

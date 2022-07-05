@@ -1,11 +1,20 @@
 .team1{
-    border: 1px solid black;
+    border: 1px solid red;
     width: 20px;
-    color: red
+    color: red;
+
 }
-.team2{
-    border: 1px solid black;
+.team2 {
+    border: 1px solid green;
     width: 20px;
     color: green
 
+}
+.team1 img{
+    width: 20px;
+    fill: red;
+}
+.team2 img{
+    width: 20px;
+    fill: green;
 }
