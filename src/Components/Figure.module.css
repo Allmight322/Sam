@@ -1,47 +1,40 @@
-.team11{
+.team1{
     border: 1px solid red;
 }
-.team12{
-    border: 1px solid red;
-}
-.team13{
-    border: 1px solid red;
-}
-.team21{
+.team2{
     border: 1px solid green;
 }
-.team22{
-    border: 1px solid green;
+.team1 path{
+    fill:red;
+
 }
-.team23{
-    border: 1px solid green;
+.team2 path{
+    fill:green;
+
 }
-.team11 path{
-    fill: red;
-    width: 20px;
-}
-.team12 path{
-    fill: red;
-    width:40px;
-}
-.team13 path{
-    fill: red;
-    width:60px;
-}
-.team21 path{
-    fill: green;
-    width: 20px;
-}
-.team22 path{
-    fill: green;
-    width: 40px;
-}
-.team23 path{
-    fill: green;
-    width: 60px;
-}
-.svg svg{
+
+
+.svg1 svg{
     padding-top: 4px;
-    width: 20px;
-    height: 22px
+    width: 8px;
+    height: 8px;
+
+
 }
+.svg2 svg{
+    padding-top: 4px;
+    width: 14px;
+    height: 14px;
+
+
+}
+.svg3 svg{
+    padding-top: 4px;
+    width: 22px;
+    height: 22px;
+
+
+}
+
+
+

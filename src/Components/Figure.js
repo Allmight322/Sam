@@ -7,7 +7,7 @@ const Order = (props) => {
     const Image = props.Image
     const Size = props.Size
     return (
-        <div className={classes.svg + " " + classes['team'+TeamNumber+Size]}>
+        <div className={classes['svg'+Size] + ' ' + classes['team'+TeamNumber]}>
             {Image}
         </div>
     );
