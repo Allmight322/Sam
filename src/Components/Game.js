@@ -1,6 +1,6 @@
 import classes from './Game.module.css'
 import Order from "./Figure";
-import React from 'react';
+import React, {useState} from 'react';
 const image = <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
 width="640.000000pt" height='1280.000000pt' viewBox="0 0 640.000000 1280.000000"
 preserveAspectRatio="xMidYMid meet">
@@ -66,17 +66,21 @@ l-16 -56 -80 -34 c-118 -50 -181 -94 -280 -198 -97 -103 -127 -152 -127 -209
 </svg>
 
 const Game=()=>{
+   const [selected,SetSelected]=useState(false)
+    const waySelect=()=>{
+       SetSelected(true)
+    }
     return(
        <div className={classes.main}>
            <div>
                <table>
                    <tr>
-                       <td><Order Nubmer='1' Size='1' TeamNumber='1' Image={image}/> </td>
-                       <td><Order Nubmer='2' Size='1' TeamNumber='1' Image={image}/></td>
-                       <td><Order Nubmer='3' Size='2' TeamNumber='1' Image={image}/></td>
-                       <td><Order Nubmer='4' Size='2' TeamNumber='1' Image={image}/></td>
-                       <td><Order Nubmer='5' Size='3' TeamNumber='1' Image={image}/></td>
-                       <td><Order Nubmer='6' Size='3' TeamNumber='1' Image={image}/></td>
+                       <td><Order Nubmer='1' Size='1' TeamNumber='1' Image={image} Selected={{selected}}/> </td>
+                       <td><Order Nubmer='2' Size='1' TeamNumber='1' Image={image} Selected={{selected}}/></td>
+                       <td><Order Nubmer='3' Size='2' TeamNumber='1' Image={image} Selected={{selected}}/></td>
+                       <td><Order Nubmer='4' Size='2' TeamNumber='1' Image={image} Selected={{selected}}/></td>
+                       <td><Order Nubmer='5' Size='3' TeamNumber='1' Image={image} Selected={{selected}}/></td>
+                       <td><Order Nubmer='6' Size='3' TeamNumber='1' Image={image} Selected={{selected}}/></td>
                    </tr>
                </table>
            </div>
