@@ -66,21 +66,19 @@ l-16 -56 -80 -34 c-118 -50 -181 -94 -280 -198 -97 -103 -127 -152 -127 -209
 </svg>
 
 const Game=()=>{
-   const [selected,SetSelected]=useState(false)
-    const waySelect=()=>{
-       SetSelected(true)
-    }
+    const [selected, setSelected]= useState('')
+
     return(
        <div className={classes.main}>
            <div>
                <table>
                    <tr>
-                       <td><Order Nubmer='1' Size='1' TeamNumber='1' Image={image} Selected={{selected}}/> </td>
-                       <td><Order Nubmer='2' Size='1' TeamNumber='1' Image={image} Selected={{selected}}/></td>
-                       <td><Order Nubmer='3' Size='2' TeamNumber='1' Image={image} Selected={{selected}}/></td>
-                       <td><Order Nubmer='4' Size='2' TeamNumber='1' Image={image} Selected={{selected}}/></td>
-                       <td><Order Nubmer='5' Size='3' TeamNumber='1' Image={image} Selected={{selected}}/></td>
-                       <td><Order Nubmer='6' Size='3' TeamNumber='1' Image={image} Selected={{selected}}/></td>
+                       <td><Order Number='1' Size='1' TeamNumber='1' Image={image} Selected={selected}/> </td>
+                       <td><Order Number='2' Size='1' TeamNumber='1' Image={image} Selected={selected}/></td>
+                       <td><Order Number='3' Size='2' TeamNumber='1' Image={image} Selected={selected}/></td>
+                       <td><Order Number='4' Size='2' TeamNumber='1' Image={image} Selected={selected}/></td>
+                       <td><Order Number='5' Size='3' TeamNumber='1' Image={image} Selected={selected}/></td>
+                       <td><Order Number='6' Size='3' TeamNumber='1' Image={image} Selected={selected}/></td>
                    </tr>
                </table>
            </div>
@@ -104,15 +102,19 @@ const Game=()=>{
            <div>
                <table>
                    <tr>
-                       <td><Order Nubmer='7' Size='1' TeamNumber='2' Image={image}/></td>
-                       <td><Order Nubmer='8' Size='1' TeamNumber='2' Image={image}/></td>
-                       <td><Order Nubmer='9' Size='2' TeamNumber='2' Image={image}/></td>
-                       <td><Order Nubmer='10' Size='2' TeamNumber='2' Image={image}/></td>
-                       <td><Order Nubmer='11' Size='3' TeamNumber='2' Image={image}/></td>
-                       <td><Order Nubmer='12' Size='3' TeamNumber='2' Image={image}/></td>
+                       <td><Order Number='7' Size='1' TeamNumber='2' Image={image} Selected={selected}/></td>
+                       <td><Order Number='8' Size='1' TeamNumber='2' Image={image} Selected={selected}/></td>
+                       <td><Order Number='9' Size='2' TeamNumber='2' Image={image} Selected={selected}/></td>
+                       <td><Order Number='10' Size='2' TeamNumber='2' Image={image} Selected={selected}/></td>
+                       <td><Order Number='11' Size='3' TeamNumber='2' Image={image} Selected={selected}/></td>
+                       <td><Order Number='12' Size='3' TeamNumber='2' Image={image} Selected={selected}/></td>
                    </tr>
                </table>
            </div>
+           <input
+                type ="button"
+                onClick={()=> {setSelected('1')}}
+           />
 
        </div>
    )
