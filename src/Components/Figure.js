@@ -3,12 +3,15 @@ import classes from './Figure.module.css'
 import EnterField from "./EnterField";
 import Game from "./Game";
 
-const Order = ({Number, TeamNumber, Image, Size, Selected}) => {
+const Order = ({Number, TeamNumber, Image, Size, Selected }) => {
     let isSelected = (Selected===Number)
 
 
     return (
         <div className={classes['svg'+Size] + ' ' + classes['team'+TeamNumber]}>
+            <input
+            type='button'
+            onClick={Selected(Number)}/>
             {isSelected ? "+" : Image}
         </div>
     );
