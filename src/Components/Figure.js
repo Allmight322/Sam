@@ -11,10 +11,8 @@ const message=()=>{
 }
 
     return (
-        <div className={classes['svg'+Size] + ' ' + classes['team'+TeamNumber]}>
-            <input
-            type='button'
-            onClick={message}/>
+        <div onClick={message} className={classes['svg'+Size] + ' ' + classes['team'+TeamNumber]}>
+
             {isSelected ? "+" : Image}
         </div>
     );
