@@ -7,13 +7,16 @@ const Order = ({Number, TeamNumber, Image, Size, Selected, SetSelected}) => {
     let isSelected = (Selected===Number)
 const message=()=>{
         SetSelected(Number)
-        console.log('123')
+    console.log(isSelected)
+
 }
 
-    return (
-        <div onClick={message} className={classes['svg'+Size] + ' ' + classes['team'+TeamNumber]}>
 
-            {isSelected ? "+" : Image}
+
+    return (
+        <div onClick={message} className={classes['svg'+Size+isSelected] + ' ' + classes['team'+TeamNumber]}>
+
+            {isSelected ? Image : Image}
         </div>
     );
 };

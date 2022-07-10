@@ -12,29 +12,56 @@
     fill:green;
 
 }
+.team3 path{
+    fill:blue;
+
+}
 
 
-.svg1 svg{
+
+.svg1true svg{
+    padding-top: 22px;
+    width: 22px;
+    height: 22px;
+
+
+}
+.svg2true svg{
+    padding-top: 22px;
+    width: 22px;
+    height: 22px;
+
+
+}
+.svg3true svg {
+    padding-top: 22px;
+    width: 22px;
+    height: 22px;
+
+
+}
+.svg1false svg{
     padding-top: 4px;
     width: 8px;
     height: 8px;
 
 
 }
-.svg2 svg{
+.svg2false svg{
     padding-top: 4px;
     width: 14px;
     height: 14px;
 
 
 }
-.svg3 svg{
+.svg3false svg {
     padding-top: 4px;
     width: 22px;
     height: 22px;
 
 
 }
+
 
 
 
