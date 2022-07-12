@@ -1,65 +1,57 @@
-.team1{
+.team1 {
     border: 1px solid red;
 }
-.team2{
+
+.team2 {
     border: 1px solid green;
 }
-.team1 path{
-    fill:red;
 
-}
-.team2 path{
-    fill:green;
-
-}
-.team3 path{
-    fill:blue;
+.team1 path {
+    fill: red;
 
 }
 
-
-
-.svg1true svg{
-    padding-top: 22px;
-    width: 22px;
-    height: 22px;
-
+.team2 path {
+    fill: green;
 
 }
-.svg2true svg{
-    padding-top: 22px;
-    width: 22px;
-    height: 22px;
 
+.team3 path {
+    fill: blue;
 
 }
-.svg3true svg {
-    padding-top: 22px;
-    width: 22px;
-    height: 22px;
 
 
-}
-.svg1false svg{
+.svgisSelectedtrue svg {
     padding-top: 4px;
-    width: 8px;
-    height: 8px;
+    width: 35px;
 
 
 }
-.svg2false svg{
+
+.svgisSelectedfalse svg {
     padding-top: 4px;
-    width: 14px;
-    height: 14px;
+    width: 5px;
 
 
 }
-.svg3false svg {
-    padding-top: 4px;
-    width: 22px;
-    height: 22px;
+
+.size1 svg {
+
+    height: 5px;
+
+}
+
+.size2 svg {
 
 
+    height: 15px;
+
+}
+
+.size3 svg {
+
+    height: 25px;
 }
 
 

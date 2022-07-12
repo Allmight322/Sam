@@ -14,7 +14,7 @@ const message=()=>{
 
 
     return (
-        <div onClick={message} className={classes['svg'+Size+isSelected] + ' ' + classes['team'+TeamNumber]}>
+        <div onClick={message} className={classes['svg'+"isSelected"+isSelected] + ' '+classes['size'+Size] + ' ' + classes['team'+TeamNumber]}>
 
             {isSelected ? Image : Image}
         </div>
