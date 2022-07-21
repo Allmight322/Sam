@@ -3,13 +3,15 @@ import classes from './Figure.module.css'
 import EnterField from "./EnterField";
 import Game from "./Game";
 
-const Order = ({Number, TeamNumber, Image, Size, Selected, SetSelected}) => {
+
+const Figure = ({Number, TeamNumber, Image, Size, Selected, SetSelected}) => {
     let isSelected = (Selected===Number)
 const message=()=>{
         SetSelected(Number)
     console.log(isSelected)
-
 }
+
+
 
 
 
@@ -21,4 +23,4 @@ const message=()=>{
     );
 };
 
-export default Order;
+export default Figure;
