@@ -2,6 +2,7 @@ import classes from './Game.module.css'
 import Figure from "./Figure";
 import React, {useState} from 'react';
 import Cell from "./Cell";
+import EnterField from "./EnterField";
 const image = <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
 width="640.000000pt" height='1280.000000pt' viewBox="0 0 640.000000 1280.000000"
 preserveAspectRatio="xMidYMid meet">
@@ -70,37 +71,36 @@ l-16 -56 -80 -34 c-118 -50 -181 -94 -280 -198 -97 -103 -127 -152 -127 -209
 
 const Game=()=>{
     const [selected, setSelected]= useState()
-    const console=()=>{
-        console.log('123')
-    }
+
+
     const [figures, setFigures] = useState([
-        <Figure Number='1' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
-        <Figure Number='2' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
-        <Figure Number='3' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
-        <Figure Number='4' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
-        <Figure Number='5' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
-        <Figure Number='6' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
-        <Figure Number='7' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
-        <Figure Number='8' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
-        <Figure Number='9' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
-        <Figure Number='10' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
-        <Figure Number='11' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
-        <Figure Number='12' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>
+        <Figure id='1' Number='1' Group='1' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
+        <Figure id='2'  Number='2' Group='1' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
+        <Figure id='3'  Number='3' Group='1' Size='2' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
+        <Figure id='4'  Number='4' Group='1' Size='2' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
+        <Figure id='5'  Number='5' Group='1' Size='3' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
+        <Figure id='6'  Number='6' Group='1' Size='3' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
+        <Figure id='7'  Number='1' Group='3' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
+        <Figure id='8'  Number='2' Group='3' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
+        <Figure id='9'  Number='3' Group='3' Size='2' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
+        <Figure id='10'  Number='4' Group='3' Size='2' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
+        <Figure id='11'  Number='5' Group='3' Size='3' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
+        <Figure id='12'  Number='6' Group='3' Size='3' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
     ])
 
+
+    console.log(selected)
     return(
-
-
        <div className={classes.main}>
            <div >
               <table>
                    <tr>
-                       <td><Cell Number='1' Group='1'/></td>
-                       <td><Cell Number='2' Group='1'/></td>
-                       <td><Cell Number='3' Group='1'/></td>
-                       <td><Cell Number='4' Group='1'/></td>
-                       <td><Cell Number='5' Group='1'/></td>
-                       <td><Cell Number='6' Group='1'/></td>
+                       <td><Cell Number='1' Group='1' Figures={figures} setFigures = {setFigures}/></td>
+                       <td><Cell Number='2' Group='1' Figures={figures} setFigures = {setFigures} /></td>
+                       <td><Cell Number='3' Group='1' Figures={figures} setFigures = {setFigures}/></td>
+                       <td><Cell Number='4' Group='1' Figures={figures} setFigures = {setFigures}/></td>
+                       <td><Cell Number='5' Group='1' Figures={figures} setFigures = {setFigures}/></td>
+                       <td><Cell Number='6' Group='1' Figures={figures} setFigures = {setFigures}/></td>
                      {/*<td><Figure Number='1' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/> </td>
                        <td><Figure Number='2' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/></td>
                        <td><Figure Number='3' Size='2' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/></td>
@@ -112,30 +112,30 @@ const Game=()=>{
            </div>
         <table >
             <tr>
-                <td className={classes.style}><Cell Number='7' Group='2'/></td>
-                <td className={classes.style}><Cell Number='8' Group='2'/></td>
-                <td className={classes.style}><Cell Number='9' Group='2'/></td>
+                <td className={classes.style}><Cell Number='1' Group='2'/></td>
+                <td className={classes.style}><Cell Number='2' Group='2'/></td>
+                <td className={classes.style}><Cell Number='3' Group='2'/></td>
              </tr>
             <tr>
-                <td className={classes.style}><Cell Number='10' Group='2'/></td>
-                <td className={classes.style}><Cell Number='11' Group='2'/></td>
-                <td className={classes.style}><Cell Number='12' Group='2'/></td>
+                <td className={classes.style}><Cell Number='4' Group='2'/></td>
+                <td className={classes.style}><Cell Number='5' Group='2'/></td>
+                <td className={classes.style}><Cell Number='6' Group='2'/></td>
              </tr>
             <tr>
-                 <td className={classes.style}><Cell Number='13' Group='2'/></td>
-                 <td className={classes.style}><Cell Number='14' Group='2'/></td>
-                 <td className={classes.style}><Cell Number='15' Group='2'/></td>
+                 <td className={classes.style}><Cell Number='7' Group='2'/></td>
+                 <td className={classes.style}><Cell Number='8' Group='2'/></td>
+                 <td className={classes.style}><Cell Number='9' Group='2'/></td>
              </tr>
          </table>
            <div>
                <table>
                    <tr>
-                       <td><Cell Number='17' Group='3'/></td>
-                       <td><Cell Number='18' Group='3'/></td>
-                       <td><Cell Number='19' Group='3'/></td>
-                       <td><Cell Number='20' Group='3'/></td>
-                       <td><Cell Number='21' Group='3'/></td>
-                       <td><Cell Number='22' Group='3'/></td>
+                       <td><Cell Number='1' Group='3' Figures={figures} setFigures = {setFigures}/></td>
+                       <td><Cell Number='2' Group='3' Figures={figures} setFigures = {setFigures}/></td>
+                       <td><Cell Number='3' Group='3' Figures={figures} setFigures = {setFigures}/></td>
+                       <td><Cell Number='4' Group='3' Figures={figures} setFigures = {setFigures}/></td>
+                       <td><Cell Number='5' Group='3' Figures={figures} setFigures = {setFigures}/></td>
+                       <td><Cell Number='6' Group='3' Figures={figures} setFigures = {setFigures}/></td>
                       {/* <td><Figure Number='7' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>
                        <td><Figure Number='8' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>
                        <td><Figure Number='9' Size='2' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>

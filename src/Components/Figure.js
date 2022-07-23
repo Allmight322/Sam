@@ -1,22 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from './Figure.module.css'
-import EnterField from "./EnterField";
-import Game from "./Game";
 
 
-const Figure = ({Number, TeamNumber, Image, Size, Selected, SetSelected}) => {
-    let isSelected = (Selected===Number)
-const message=()=>{
-        SetSelected(Number)
-    console.log(isSelected)
-}
-
-
-
+const Figure = ({Number, TeamNumber, Image, Size, Selected, SetSelected, id}) => {
+    let isSelected = (Selected === id)
+    const message = () => {
+        SetSelected(id)
+        console.log(isSelected)
+    }
 
 
     return (
-        <div onClick={message} className={classes['svg'+"isSelected"+isSelected] + ' '+classes['size'+Size] + ' ' + classes['team'+TeamNumber]}>
+        <div onClick={message}
+             className={classes['svg' + "isSelected" + isSelected] + ' ' + classes['size' + Size] + ' ' + classes['team' + TeamNumber]}>
 
             {isSelected ? Image : Image}
         </div>
