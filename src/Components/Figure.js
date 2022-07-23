@@ -4,14 +4,13 @@ import classes from './Figure.module.css'
 const Figure = ({Number, TeamNumber, Image, Size, Selected, SetSelected, id}) => {
     let isSelected = (Selected === id)
 
-    const message = () => {
+    const onClickHandler = () => {
         SetSelected(id)
     }
 
     return (
-        <div onClick={message}
-             className={classes['svg' + "isSelected" + isSelected] + ' ' + classes['size' + Size] + ' ' + classes['team' + TeamNumber]}>
-
+        <div onClick={onClickHandler}
+             className={classes['svgisSelected' + isSelected] + ' ' + classes['size' + Size] + ' ' + classes['team' + TeamNumber]}>
             {isSelected ? Image : Image}
         </div>
     );
