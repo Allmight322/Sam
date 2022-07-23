@@ -5,7 +5,7 @@ import Game from "./Components/Game";
 
 
 function App() {
-    const [GameField, setGameField] = useState(false)
+    const [GameField, setGameField] = useState(true)
 
     function drawElement() {
         if (GameField===false)
@@ -13,6 +13,7 @@ function App() {
         if (GameField===true)
             return <Game/>
     }
+
   return (
       <div className={classes.Content}>
           {drawElement()}

@@ -22,17 +22,15 @@
 }
 
 
-.svgisSelectedtrue  {
+.svgisSelectedtrue {
     padding-top: 4px;
     border: 6px solid blue;
-
 
 
 }
 
 .svgisSelectedfalse svg {
     padding-top: 4px;
-
 
 
 }
