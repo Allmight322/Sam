@@ -6,7 +6,7 @@ const Cell=(props)=>{
    const Number=props.Number
    const Group = props.Group
    const Figures = props.Figures ? props.Figures: []
-   const setFigures = props.setFigures
+
    let figure
 
    for (let i = 0; i < Figures.length; i++) {

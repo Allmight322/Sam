@@ -73,7 +73,7 @@ const Game=()=>{
     const [selected, setSelected]= useState()
 
 
-    const [figures, setFigures] = useState([
+    const figures = [
         <Figure id='1' Number='1' Group='1' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
         <Figure id='2'  Number='2' Group='1' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
         <Figure id='3'  Number='3' Group='1' Size='2' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/>,
@@ -86,7 +86,7 @@ const Game=()=>{
         <Figure id='10'  Number='4' Group='3' Size='2' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
         <Figure id='11'  Number='5' Group='3' Size='3' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
         <Figure id='12'  Number='6' Group='3' Size='3' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/>,
-    ])
+    ]
 
 
     console.log(selected)
@@ -95,12 +95,12 @@ const Game=()=>{
            <div >
               <table>
                    <tr>
-                       <td><Cell Number='1' Group='1' Figures={figures} setFigures = {setFigures}/></td>
-                       <td><Cell Number='2' Group='1' Figures={figures} setFigures = {setFigures} /></td>
-                       <td><Cell Number='3' Group='1' Figures={figures} setFigures = {setFigures}/></td>
-                       <td><Cell Number='4' Group='1' Figures={figures} setFigures = {setFigures}/></td>
-                       <td><Cell Number='5' Group='1' Figures={figures} setFigures = {setFigures}/></td>
-                       <td><Cell Number='6' Group='1' Figures={figures} setFigures = {setFigures}/></td>
+                       <td><Cell Number='1' Group='1' Figures={figures} /></td>
+                       <td><Cell Number='2' Group='1' Figures={figures}  /></td>
+                       <td><Cell Number='3' Group='1' Figures={figures} /></td>
+                       <td><Cell Number='4' Group='1' Figures={figures} /></td>
+                       <td><Cell Number='5' Group='1' Figures={figures} /></td>
+                       <td><Cell Number='6' Group='1' Figures={figures}/></td>
                      {/*<td><Figure Number='1' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/> </td>
                        <td><Figure Number='2' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/></td>
                        <td><Figure Number='3' Size='2' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/></td>
@@ -130,12 +130,12 @@ const Game=()=>{
            <div>
                <table>
                    <tr>
-                       <td><Cell Number='1' Group='3' Figures={figures} setFigures = {setFigures}/></td>
-                       <td><Cell Number='2' Group='3' Figures={figures} setFigures = {setFigures}/></td>
-                       <td><Cell Number='3' Group='3' Figures={figures} setFigures = {setFigures}/></td>
-                       <td><Cell Number='4' Group='3' Figures={figures} setFigures = {setFigures}/></td>
-                       <td><Cell Number='5' Group='3' Figures={figures} setFigures = {setFigures}/></td>
-                       <td><Cell Number='6' Group='3' Figures={figures} setFigures = {setFigures}/></td>
+                       <td><Cell Number='1' Group='3' Figures={figures} /></td>
+                       <td><Cell Number='2' Group='3' Figures={figures} /></td>
+                       <td><Cell Number='3' Group='3' Figures={figures}/></td>
+                       <td><Cell Number='4' Group='3' Figures={figures} /></td>
+                       <td><Cell Number='5' Group='3' Figures={figures} /></td>
+                       <td><Cell Number='6' Group='3' Figures={figures} /></td>
                       {/* <td><Figure Number='7' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>
                        <td><Figure Number='8' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>
                        <td><Figure Number='9' Size='2' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>
