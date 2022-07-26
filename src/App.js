@@ -8,17 +8,17 @@ function App() {
     const [GameField, setGameField] = useState(true)
 
     function drawElement() {
-        if (GameField===false)
+        if (GameField === false)
             return <EnterField setGameField={setGameField}/>
-        if (GameField===true)
+        if (GameField === true)
             return <Game/>
     }
 
-  return (
-      <div className={classes.Content}>
-          {drawElement()}
-      </div>
-);
+    return (
+        <div className={classes.Content}>
+            {drawElement()}
+        </div>
+    );
 }
 
 export default App;

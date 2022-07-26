@@ -2,16 +2,16 @@ import classes from './Game.module.css'
 import Figure from "./Figure";
 import React, {useState} from 'react';
 import Cell from "./Cell";
-import EnterField from "./EnterField";
+
 const image = <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-width="640.000000pt" height='1280.000000pt' viewBox="0 0 640.000000 1280.000000"
-preserveAspectRatio="xMidYMid meet">
+                   width="640.000000pt" height='1280.000000pt' viewBox="0 0 640.000000 1280.000000"
+                   preserveAspectRatio="xMidYMid meet">
     <metadata>
-    Created by potrace 1.15, written by Peter Selinger 2001-2017
-</metadata>
-<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-   fill="#000000" stroke="none">
-    <path d="M2870 12785 c-25 -8 -96 -43 -157 -79 -182 -104 -264 -126 -475 -126
+        Created by potrace 1.15, written by Peter Selinger 2001-2017
+    </metadata>
+    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+       fill="#000000" stroke="none">
+        <path d="M2870 12785 c-25 -8 -96 -43 -157 -79 -182 -104 -264 -126 -475 -126
 -101 0 -123 3 -202 31 -69 24 -98 29 -131 24 -94 -14 -180 -102 -212 -216
 l-16 -56 -80 -34 c-118 -50 -181 -94 -280 -198 -97 -103 -127 -152 -127 -209
 0 -38 -2 -41 -47 -60 -80 -34 -208 -69 -408 -113 -242 -52 -334 -81 -366 -115
@@ -64,102 +64,83 @@ l-16 -56 -80 -34 c-118 -50 -181 -94 -280 -198 -97 -103 -127 -152 -127 -209
 64 -100 157 -196 352 -72 146 -147 289 -166 319 -22 32 -72 82 -126 126 -159
 127 -293 273 -438 477 -25 36 -77 90 -115 121 -38 30 -84 71 -102 92 -33 38
 -33 40 -25 99 4 34 8 93 8 131 0 115 -49 183 -157 219 -57 19 -97 19 -157 1z"
-    />
-</g>
+        />
+    </g>
 </svg>
 
 
-const Game=()=>{
-    const [selected, setSelected]= useState()
-    const [figuresAtr, setFiguresAtr]=useState([
-        {id:'1', Number:'1', Group:'1', Size:'1', TeamNumber:'1'},
-        {id:'2', Number:'2', Group:'1', Size:'1', TeamNumber:'1'},
-        {id:'3', Number:'3', Group:'1', Size:'2', TeamNumber:'1'},
-        {id:'4', Number:'4', Group:'1', Size:'2', TeamNumber:'1'},
-        {id:'5', Number:'5', Group:'1', Size:'3', TeamNumber:'1'},
-        {id:'6', Number:'6', Group:'1', Size:'3', TeamNumber:'1'},
-        {id:'7', Number:'1', Group:'3', Size:'1', TeamNumber:'2'},
-        {id:'8', Number:'2', Group:'3', Size:'1', TeamNumber:'2'},
-        {id:'9', Number:'3', Group:'3', Size:'2', TeamNumber:'2'},
-        {id:'10', Number:'4', Group:'3', Size:'2', TeamNumber:'2'},
-        {id:'11', Number:'5', Group:'3', Size:'3', TeamNumber:'2'},
-        {id:'12', Number:'6', Group:'3', Size:'3', TeamNumber:'2'},
+const Game = () => {
+    const [selected, setSelected] = useState()
+    const [figuresAtr, setFiguresAtr] = useState([
+        {id: '1', Number: '1', Group: '1', Size: '1', TeamNumber: '1'},
+        {id: '2', Number: '2', Group: '1', Size: '1', TeamNumber: '1'},
+        {id: '3', Number: '3', Group: '1', Size: '2', TeamNumber: '1'},
+        {id: '4', Number: '4', Group: '1', Size: '2', TeamNumber: '1'},
+        {id: '5', Number: '5', Group: '1', Size: '3', TeamNumber: '1'},
+        {id: '6', Number: '6', Group: '1', Size: '3', TeamNumber: '1'},
+        {id: '7', Number: '1', Group: '3', Size: '1', TeamNumber: '2'},
+        {id: '8', Number: '2', Group: '3', Size: '1', TeamNumber: '2'},
+        {id: '9', Number: '3', Group: '3', Size: '2', TeamNumber: '2'},
+        {id: '10', Number: '4', Group: '3', Size: '2', TeamNumber: '2'},
+        {id: '11', Number: '5', Group: '3', Size: '3', TeamNumber: '2'},
+        {id: '12', Number: '6', Group: '3', Size: '3', TeamNumber: '2'},
     ])
-    const handleChange = e => {
+    /*const handleChange = e => {
 
-    }
-    const figures=figuresAtr.map(e=><Figure id={e.id} Number={e.Number}  Group={e.Group}  Size={e.Size}  TeamNumber={e.TeamNumber}  Image={image} Selected={selected} SetSelected={setSelected}/>)
-
-
-
-const getCell=(number, group, style='')=>
-    <td className={style}><Cell Number={number} Group={group} Figures={figures} Selected={selected} SetFiguresAtr={setFiguresAtr}/></td>
+    }*/
+    const figures = figuresAtr.map(e => <Figure id={e.id} Number={e.Number} Group={e.Group} Size={e.Size}
+                                                TeamNumber={e.TeamNumber} Image={image} Selected={selected}
+                                                SetSelected={setSelected}/>)
 
 
+    const getCell = (number, group, style = '') =>
+        <td className={style}><Cell Number={number} Group={group} Figures={figures} Selected={selected}
+                                    SetFiguresAtr={setFiguresAtr}/></td>
 
 
-    console.log(selected)
-    console.log(figures)
-    return(
-       <div className={classes.main}>
-           <div >
-              <table>
-                   <tr>
-                       {getCell('1','1')}
-                       {getCell('2','1')}
-                       {getCell('3','1')}
-                       {getCell('4','1')}
-                       {getCell('5','1')}
-                       {getCell('6','1')}
+    return (
+        <div className={classes.main}>
 
-                     {/*<td><Figure Number='1' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/> </td>
-                       <td><Figure Number='2' Size='1' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/></td>
-                       <td><Figure Number='3' Size='2' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/></td>
-                       <td><Figure Number='4' Size='2' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/></td>
-                       <td><Figure Number='5' Size='3' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/></td>
-                       <td><Figure Number='6' Size='3' TeamNumber='1' Image={image} Selected={selected} SetSelected={setSelected}/></td>*/}
-                   </tr>
-               </table>
-           </div>
-        <table >
-            <tr>
-                {getCell('1','2',classes.style)}
-                {getCell('2','2',classes.style)}
-                {getCell('3','2',classes.style)}
+            <div><table><tbody>
+                <tr>
+                    {getCell('1', '1')}
+                    {getCell('2', '1')}
+                    {getCell('3', '1')}
+                    {getCell('4', '1')}
+                    {getCell('5', '1')}
+                    {getCell('6', '1')}
+                </tr>
+            </tbody></table></div>
+            <table><tbody>
+                <tr>
+                    {getCell('1', '2', classes.style)}
+                    {getCell('2', '2', classes.style)}
+                    {getCell('3', '2', classes.style)}
+                </tr>
+                <tr>
+                    {getCell('4', '2', classes.style)}
+                    {getCell('5', '2', classes.style)}
+                    {getCell('6', '2', classes.style)}
+                </tr>
+                <tr>
+                    {getCell('7', '2', classes.style)}
+                    {getCell('8', '2', classes.style)}
+                    {getCell('9', '2', classes.style)}
+                </tr>
+            </tbody></table>
+            <div><table><tbody>
+                <tr>
+                    {getCell('1', '3')}
+                    {getCell('2', '3')}
+                    {getCell('3', '3')}
+                    {getCell('4', '3')}
+                    {getCell('5', '3')}
+                    {getCell('6', '3')}
+                </tr>
+            </tbody></table></div>
 
-             </tr>
-            <tr>
-                {getCell('4','2',classes.style)}
-                {getCell('5','2',classes.style)}
-                {getCell('6','2',classes.style)}
-             </tr>
-            <tr>
-                {getCell('7','2',classes.style)}
-                {getCell('8','2',classes.style)}
-                {getCell('9','2',classes.style)}
-             </tr>
-         </table>
-           <div>
-               <table>
-                   <tr>
-                       {getCell('1','3')}
-                       {getCell('2','3')}
-                       {getCell('3','3')}
-                       {getCell('4','3')}
-                       {getCell('5','3')}
-                       {getCell('6','3')}
-                      {/* <td><Figure Number='7' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>
-                       <td><Figure Number='8' Size='1' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>
-                       <td><Figure Number='9' Size='2' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>
-                       <td><Figure Number='10' Size='2' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>
-                       <td><Figure Number='11' Size='3' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>
-                       <td><Figure Number='12' Size='3' TeamNumber='2' Image={image} Selected={selected} SetSelected={setSelected}/></td>*/}
-                   </tr>
-               </table>
-           </div>
+        </div>
 
-       </div>
-
-   )
+    )
 };
 export default Game;
