@@ -22,7 +22,7 @@ const Game = () => {
         {id: '12', Number: '6', Group: '3', Size: '3', TeamNumber: '2'},
     ])
 
-    const changeFigurePosition = (newGroup, newNumber) => {
+    const changeFigurePosition = (newGroup, newNumber,) => {
         // find selected figure
         const selectedFigureAttr = figuresAtr.find(e => e.id === selected)
 
@@ -35,6 +35,7 @@ const Game = () => {
         // change attributes
         selectedFigureAttr.Group = newGroup
         selectedFigureAttr.Number = newNumber
+
 
         // save new value
         setFiguresAtr(
